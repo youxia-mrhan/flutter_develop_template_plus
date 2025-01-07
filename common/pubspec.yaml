@@ -1,0 +1,47 @@
+name: common
+description: "A new Flutter project."
+publish_to: 'none' 
+version: 1.0.0+1
+environment:
+  sdk: '>=3.4.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  app:
+    path: ../app  
+  home:
+    path: ../home  
+  message:
+    path: ../message  
+  order:
+    path: ../order  
+  personal:
+    path: ../personal                  
+
+  cupertino_icons: ^1.0.6
+  dio: ^5.4.3+1
+  fluro: ^2.0.5
+  pull_to_refresh: ^2.0.0
+  sentry_flutter: ^7.8.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^3.0.0
+
+
+flutter:
+  assets:
+    - assets/images/
+
+  fonts:
+    - family: Basteleur
+      fonts:
+        - asset: assets/fonts/Basteleur.ttf
+
+  uses-material-design: true
+
+

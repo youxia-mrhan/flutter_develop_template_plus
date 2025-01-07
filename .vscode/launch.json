@@ -1,0 +1,56 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "app",
+            "cwd": "app",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main.dart",
+        },
+        {
+            "name": "app_dev",
+            "cwd": "app",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_dev.dart",
+        },
+        {
+            "name": "app_pre",
+            "cwd": "app",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_pre.dart",
+        },
+        {
+            "name": "common",
+            "cwd": "common",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "home",
+            "cwd": "home",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "message",
+            "cwd": "message",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "order",
+            "cwd": "order",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "personal",
+            "cwd": "personal",
+            "request": "launch",
+            "type": "dart"
+        }
+    ]
+}

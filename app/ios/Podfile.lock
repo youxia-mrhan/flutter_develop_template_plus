@@ -1,0 +1,36 @@
+PODS:
+  - Flutter (1.0.0)
+  - package_info_plus (0.4.5):
+    - Flutter
+  - Sentry/HybridSDK (8.25.0)
+  - sentry_flutter (7.20.2):
+    - Flutter
+    - FlutterMacOS
+    - Sentry/HybridSDK (= 8.25.0)
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - package_info_plus (from `.symlinks/plugins/package_info_plus/ios`)
+  - sentry_flutter (from `.symlinks/plugins/sentry_flutter/ios`)
+
+SPEC REPOS:
+  trunk:
+    - Sentry
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  package_info_plus:
+    :path: ".symlinks/plugins/package_info_plus/ios"
+  sentry_flutter:
+    :path: ".symlinks/plugins/sentry_flutter/ios"
+
+SPEC CHECKSUMS:
+  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  package_info_plus: af8e2ca6888548050f16fa2f1938db7b5a5df499
+  Sentry: cd86fc55628f5b7c572cabe66cc8f95a9d2f165a
+  sentry_flutter: 99aff87df84da27d0c73bc58b8f9399ef73811bc
+
+PODFILE CHECKSUM: 819463e6a0290f5a72f145ba7cde16e8b6ef0796
+
+COCOAPODS: 1.11.0
