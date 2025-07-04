@@ -1,6 +1,5 @@
 import 'dart:math';
 
-import 'package:app/app.dart';
 import 'package:common/mvvm/base_page.dart';
 import 'package:common/res/img/common_img_path.dart';
 import 'package:common/res/style/color_styles.dart';
@@ -54,6 +53,7 @@ class PersonalViewState extends BaseStatefulPageState<PersonalView, PersonalView
 
   @override
   Widget appBuild(BuildContext context) {
+    final media = MediaQuery.of(context);     
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: overlayBlackStyle,
       child: Material(
@@ -62,7 +62,7 @@ class PersonalViewState extends BaseStatefulPageState<PersonalView, PersonalView
             Align(
               alignment: Alignment.center,
               child: Container(
-                margin: EdgeInsets.only(top: media!.padding.top),
+                margin: EdgeInsets.only(top: media.padding.top),
                 alignment: Alignment.center,
                 child: Image.asset(CommonImgPath.ts,package: PACKAGE_COMMON_NAME),
               ),
@@ -70,7 +70,7 @@ class PersonalViewState extends BaseStatefulPageState<PersonalView, PersonalView
             Align(
               alignment: Alignment.center,
               child: Container(
-                margin: EdgeInsets.only(top: kToolbarHeight + media!.padding.top),
+                margin: EdgeInsets.only(top: kToolbarHeight + media.padding.top),
                 alignment: Alignment.center,
                 child: ElevatedButton(
                   child: Text(StrPersonal.register),
@@ -96,7 +96,7 @@ class PersonalViewState extends BaseStatefulPageState<PersonalView, PersonalView
             Align(
               alignment: Alignment.center,
               child: Container(
-                margin: EdgeInsets.only(top: kToolbarHeight + media!.padding.top + 100),
+                margin: EdgeInsets.only(top: kToolbarHeight + media.padding.top + 100),
                 alignment: Alignment.center,
                 child: ElevatedButton(
                   child: Text(StrPersonal.login),
@@ -116,7 +116,7 @@ class PersonalViewState extends BaseStatefulPageState<PersonalView, PersonalView
             Align(
               alignment: Alignment.center,
               child: Container(
-                margin: EdgeInsets.only(top: kToolbarHeight + media!.padding.top + 200),
+                margin: EdgeInsets.only(top: kToolbarHeight + media.padding.top + 200),
                 alignment: Alignment.center,
                 child: ElevatedButton(
                   child: Text(StrPersonal.switchUser),
@@ -131,7 +131,7 @@ class PersonalViewState extends BaseStatefulPageState<PersonalView, PersonalView
               ),
             ),
             Container(
-              margin: EdgeInsets.only(top: kToolbarHeight + media!.padding.top),
+              margin: EdgeInsets.only(top: kToolbarHeight + media.padding.top),
               color: ColorStyles.color_388E3C,
               child: executeSwitchLogin
                   ? Row(
@@ -148,18 +148,18 @@ class PersonalViewState extends BaseStatefulPageState<PersonalView, PersonalView
               )
                   : SizedBox(),
             ),
-            _myAppBar(),
+            _myAppBar(media),
           ],
         ),
       ),
     );
   }
 
-  _myAppBar() {
+  _myAppBar(MediaQueryData media) {
     return Container(
-      width: media!.size.width,
-      height: kToolbarHeight + media!.padding.top,
-      padding: EdgeInsets.only(top: media!.padding.top,left: 16),
+      width: media.size.width,
+      height: kToolbarHeight + media.padding.top,
+      padding: EdgeInsets.only(top: media.padding.top,left: 16),
       color: AppBarTheme.of(context).backgroundColor,
       alignment: Alignment.centerLeft,
       child: Builder(
